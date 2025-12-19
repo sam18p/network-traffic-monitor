@@ -20,11 +20,11 @@ CHECK_INTERVAL = 1  # Seconds between PPS checks
 
 ### Packet Capturing ###
 CAPTURE_PACKET_COUNT = 10000  # How many packets you want to capture from the potential (D)DoS attack
-CAPTURE_FILENAME_PREFIX = "attack_capture_"  # Saved as .pcap file, e.g., attack_capture_20251218_123456.pcap
+CAPTURE_FILENAME_PREFIX = "traffic_capture_"  # Saved as .pcap file, e.g., attack_capture_20251218_123456.pcap
 
 def send_discord_alert(pps, capture_file=None):
     embed = {
-        "title": "Potential (D)DoS Attack Detected!",
+        "title": "Unusual Network Traffic Detected",
         "fields": [
             {"name": "Server", "value": SERVER_NAME, "inline": False},
             {"name": "Incoming PPS", "value": str(pps), "inline": False}
@@ -34,15 +34,15 @@ def send_discord_alert(pps, capture_file=None):
     }
     
     if capture_file:
-        embed["description"] = f"A capture of {CAPTURE_PACKET_COUNT} packets has been saved to `{capture_file}` for analysis."
+        embed["description"] = f"A capture of {CAPTURE_PACKET_COUNT} packets has been saved to `{capture_file}` for review."
     
     payload = {"embeds": [embed]}
     try:
         response = requests.post(DISCORD_WEBHOOK_URL, json=payload)
         response.raise_for_status()
-        print(f"[!] Potential attack detected, sending alert to Discord! {pps} PPS")
+        print(f"[!] Unusual traffic detected, sending alert to Discord! {pps} PPS")
         if capture_file:
-            print(f"[+] Captured packets from this potential attack: {capture_file}")
+            print(f"[+] Captured packets related to this traffic spike: {capture_file}")
     except requests.exceptions.RequestException as e:
         print(f"Failed to send alert: {e}")
 
