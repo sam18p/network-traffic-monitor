@@ -1,6 +1,6 @@
-# 🛡️ Server Attack Monitor
+# 🛡️ Network Traffic Monitor
 
-A cross-platform Python script which monitors incoming packets per second in the background, if it exceeds the desired amount will alert to a Discord webhook with the relevant information and begin capturing a desired amount of packets for the server manager to analyse.
+A cross-platform Python tool that monitors incoming network traffic and alerts via Discord when traffic exceeds defined thresholds, with optional packet capture for diagnostics and analysis.
 
 ---
 
@@ -22,10 +22,12 @@ A cross-platform Python script which monitors incoming packets per second in the
 
 ## ⭐ Features
 
-- Get instant alerts of potential (D)DoS attacks ongoing on your server
-- Capture the incoming packets once the threshold has been exceeded
-- Customise alerts for Discord webhooks
-- Customise all variables based on your server's traffic
+- Cross-platform (Linux, Windows, macOS)
+- Real-time monitoring of incoming packets per second
+- Configurable traffic thresholds
+- Discord webhook alerts with relevant context
+- Optional packet capture for investigation and diagnostics
+- Designed to run quietly in the background
 
 
 ---
@@ -43,8 +45,8 @@ A cross-platform Python script which monitors incoming packets per second in the
 ## 📥 Installation
 
 ```bash
-git clone https://github.com/sam18p/server-attack-monitor.git
-cd server-attack-monitor
+git clone https://github.com/sam18p/network-traffic-monitor.git
+cd network-traffic-monitor
 ```
 
 ## ▶️ How to Run
@@ -60,12 +62,12 @@ python --version
 
 Run the tool:
 
-python server-attack-monitor.py
+python network-traffic-monitor.py
 
 
 If that fails, try:
 
-py server-attack-monitor.py
+py network-traffic-monitor.py
 
 ## 🍎 macOS
 
@@ -76,7 +78,7 @@ python3 --version
 
 Run the script:
 
-python3 server-attack-monitor.py
+python3 network-traffic-monitor.py
 
 
 If Python isn’t installed:
@@ -89,7 +91,7 @@ Most Linux distros come with Python preinstalled.
 
 Run the script:
 
-python3 server-attack-monitor.py
+python3 network-traffic-monitor.py
 
 
 If Python is missing:
@@ -123,17 +125,17 @@ python --version
 
 **Option 1: Simple detached run (console hidden)**
 
-pythonw monitor.py
+pythonw network-traffic-monitor.py
 
 **Option 2: Run in background with output logged (from Command Prompt)**
 
-start /B python monitor.py > monitor.log 2>&1
+start /B python network-traffic-monitor.py > monitor.log 2>&1
 
 
 
 If that fails, try:
 
-py server-attack-monitor.py
+py network-traffic-monitor.py
 
 ## 🍎 macOS Server
 
@@ -146,26 +148,26 @@ Verify Python3:
 
 python3 --version
 
-nohup python3 monitor.py > monitor.log 2>&1 &
+nohup python3 network-traffic-monitor.py > monitor.log 2>&1 &
 
 You can also use **screen** or **tmux** if you prefer an attachable session:
 
-screen -dmS monitor python3 monitor.py
+screen -dmS monitor python3 network-traffic-monitor.py
 
 
 ## 🐧 Linux Server
 
 Most Linux distros come with Python preinstalled.
 
-nohup python3 monitor.py > monitor.log 2>&1 &
+nohup python3 network-traffic-monitor.py > monitor.log 2>&1 &
 
 To check if it's running:
 
-ps aux | grep monitor.py
+ps aux | grep network-traffic-monitor.py
 
 To stop it:
 
-pkill -f monitor.py
+pkill -f network-traffic-monitor.py
 
 ---
 
