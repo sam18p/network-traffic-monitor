@@ -2,6 +2,13 @@
 
 A cross-platform Python tool that monitors incoming network traffic and alerts via Discord when traffic exceeds defined thresholds, with optional packet capture for diagnostics and analysis.
 
+**Screenshot Showcase**
+
+<img width="443" height="224" alt="image" src="https://github.com/user-attachments/assets/6017c1e3-0916-4ec4-84f6-facf159f9b22" />
+
+*PPS threshold altered strictly for this example*
+
+
 ---
 
 ## 📑 Table of Contents
