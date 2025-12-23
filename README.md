@@ -181,6 +181,39 @@ DISCORD_WEBHOOK_URL = "https://discord.com/api/webhooks/YOUR_WEBHOOK_ID/YOUR_WEB
 
 The script sends rich embeds with a red alert color, server name, incoming PPS, and (after capture) a note about the saved **.pcap** file.
 
+**Creating a Discord webhook**
+
+
+
+**Have admin permissions and select settings for the desired output channel**
+
+<img width="382" height="81" alt="image" src="https://github.com/user-attachments/assets/8fedfefe-7142-4b19-902e-6bbf475bd8dd" />
+
+
+**Select integrations**
+
+<img width="296" height="256" alt="image" src="https://github.com/user-attachments/assets/a4bdeede-db9d-4ae0-aead-1f805cd70b84" />
+
+
+**Webhook**
+
+<img width="1114" height="441" alt="image" src="https://github.com/user-attachments/assets/6665b2ec-b8d3-442e-b829-e4748e0d32b5" />
+
+
+**New Webhook**
+
+<img width="1112" height="270" alt="image" src="https://github.com/user-attachments/assets/66701e34-1cc4-4514-b127-89cd18fb658b" />
+
+
+**Copy Webhook URL and add to the script**
+
+<img width="678" height="215" alt="image" src="https://github.com/user-attachments/assets/8db71527-33e3-4d29-8d2d-a6806d8187c5" />
+
+
+
+
+
+
 
 ---
 
